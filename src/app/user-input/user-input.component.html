@@ -1,0 +1,43 @@
+<form (ngSubmit)="onSubmit()">
+    <!-- to prevent browser default sbmit we use it, needed to be imported in ts file import {FormsModule} from '@angular/forms' -->
+    <div class="input-group">
+        <p>
+            <label for="initial-investment">Initial Investment</label>
+            <input 
+            id="initial-investment" 
+            name="initial-investment"
+            type="number" 
+            [(ngModel)]="enteredInitialInvestment">
+        </p>
+        <p>
+            <label for="annual-investment">Annual Investment</label>
+            <input 
+            id="annual-investment" 
+            name="annual-investment"
+            type="number"
+            [(ngModel)]="enteredAnnualInvestment"
+            >
+        </p>
+    </div>
+    <div class="input-group">
+        <p>
+            <label for="expected-investment">Expected Return</label>
+            <input 
+            id="expected-investment" 
+            name="expected-investment"
+            type="number"
+            [(ngModel)]="enteredExpectedReturn">
+        </p>
+        <p>
+            <label for="duration">Annual Investment</label>
+            <input 
+            id="duration" 
+            name="duration"
+            type="number"
+            [(ngModel)]="enteredDuration">
+        </p>
+    </div>
+    <p>
+        <button>Calculate</button>
+    </p>
+</form>
